@@ -2,6 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css"; 
 import BootstrapClient from "@/components/libraries/Bootstrap";
 import Header from "@/components/layout/Header";
+import Toastify from "@/components/libraries/Toastify"
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,6 +29,7 @@ export default function RootLayout({ children }) {
         {children}
 
         <BootstrapClient/>
+        <Toastify/>
       </body>
     </html>
   );
