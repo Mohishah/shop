@@ -6,6 +6,7 @@ import Toastify from "@/components/libraries/Toastify"
 import Footer from "@/components/layout/Footer";
 import Providers from "@/components/libraries/NextNprogress";
 import { AuthProvider } from "@/context/AuthContext";
+import Provider from "@/redux/provider";
 
 
 const geistSans = localFont({
@@ -29,14 +30,15 @@ export default function RootLayout({ children }) {
     <html lang="fa" dir="rtl">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <AuthProvider>
+        <Provider> 
         <Providers>
         <Header/>
         {children}
-
         <Footer/>
         <BootstrapClient/>
         <Toastify/>
         </Providers>
+        </Provider> 
         </AuthProvider>
       </body>
     </html>
