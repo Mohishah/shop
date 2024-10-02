@@ -2,6 +2,7 @@
 
 import Address from '@/components/cart/Address';
 import Coupon from '@/components/cart/Coupon';
+import Payment from '@/components/cart/Payment';
 import { clearCart, decrement, increment, removeFromCart, totalAmountCart } from '@/redux/slice/cartSlice';
 import { getBlurDataURL, numberFormat, salePercent } from '@/utils/helper';
 import Image from 'next/image';
@@ -128,7 +129,7 @@ const Page = () => {
                                                         </div>
                                                     </li>
                                                 </ul>
-                                                <button className="user_option btn-auth mt-4">پرداخت</button>
+                                                <Payment cart={state.cart} coupon={coupon} addressId={addressId}/>
                                             </div>
                                     </div>
                                 </div>
